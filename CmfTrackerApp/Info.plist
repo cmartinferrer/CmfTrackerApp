@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Esta app necesita acceso a tu ubicación para rastrear la ruta.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Esta app usa tu ubicación incluso en segundo plano.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Se necesita acceso a la ubicación para seguimiento en tiempo real.</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict/>
+	</array>
+</dict>
+</plist>

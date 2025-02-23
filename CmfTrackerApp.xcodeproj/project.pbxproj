@@ -1,0 +1,637 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		69B580122D6B588F0023AB7C /* CmfTrackerAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B580112D6B588F0023AB7C /* CmfTrackerAppApp.swift */; };
+		69B580142D6B588F0023AB7C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B580132D6B588F0023AB7C /* ContentView.swift */; };
+		69B580162D6B58910023AB7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69B580152D6B58910023AB7C /* Assets.xcassets */; };
+		69B580192D6B58910023AB7C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69B580182D6B58910023AB7C /* Preview Assets.xcassets */; };
+		69B580232D6B58910023AB7C /* CmfTrackerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B580222D6B58910023AB7C /* CmfTrackerAppTests.swift */; };
+		69B5802D2D6B58910023AB7C /* CmfTrackerAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5802C2D6B58910023AB7C /* CmfTrackerAppUITests.swift */; };
+		69B5802F2D6B58910023AB7C /* CmfTrackerAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5802E2D6B58910023AB7C /* CmfTrackerAppUITestsLaunchTests.swift */; };
+		69B5803D2D6B5B5D0023AB7C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5803C2D6B5B5D0023AB7C /* LocationManager.swift */; };
+		69B580492D6B65B20023AB7C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B580482D6B65B20023AB7C /* MapView.swift */; };
+		69B5804B2D6B66080023AB7C /* StartRouteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5804A2D6B66080023AB7C /* StartRouteButton.swift */; };
+		69B580552D6B70200023AB7C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B580542D6B70200023AB7C /* Event.swift */; };
+		69B580572D6B70560023AB7C /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B580562D6B70560023AB7C /* EventService.swift */; };
+		69B580592D6B707A0023AB7C /* EventsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B580582D6B707A0023AB7C /* EventsSection.swift */; };
+		69B5805B2D6B70990023AB7C /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5805A2D6B70990023AB7C /* CalendarView.swift */; };
+		69B5805D2D6B70B50023AB7C /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5805C2D6B70B40023AB7C /* EventDetailView.swift */; };
+		69B5805F2D6B717E0023AB7C /* EventCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5805E2D6B717E0023AB7C /* EventCard.swift */; };
+		69B580612D6B78DD0023AB7C /* FullScreenMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B580602D6B78DD0023AB7C /* FullScreenMapView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		69B5801F2D6B58910023AB7C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69B580062D6B588F0023AB7C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 69B5800D2D6B588F0023AB7C;
+			remoteInfo = CmfTrackerApp;
+		};
+		69B580292D6B58910023AB7C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69B580062D6B588F0023AB7C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 69B5800D2D6B588F0023AB7C;
+			remoteInfo = CmfTrackerApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		69B5800E2D6B588F0023AB7C /* CmfTrackerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CmfTrackerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		69B580112D6B588F0023AB7C /* CmfTrackerAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CmfTrackerAppApp.swift; sourceTree = "<group>"; };
+		69B580132D6B588F0023AB7C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		69B580152D6B58910023AB7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		69B580182D6B58910023AB7C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		69B5801E2D6B58910023AB7C /* CmfTrackerAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CmfTrackerAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		69B580222D6B58910023AB7C /* CmfTrackerAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CmfTrackerAppTests.swift; sourceTree = "<group>"; };
+		69B580282D6B58910023AB7C /* CmfTrackerAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CmfTrackerAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		69B5802C2D6B58910023AB7C /* CmfTrackerAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CmfTrackerAppUITests.swift; sourceTree = "<group>"; };
+		69B5802E2D6B58910023AB7C /* CmfTrackerAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CmfTrackerAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		69B5803B2D6B59AA0023AB7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		69B5803C2D6B5B5D0023AB7C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		69B580482D6B65B20023AB7C /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		69B5804A2D6B66080023AB7C /* StartRouteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartRouteButton.swift; sourceTree = "<group>"; };
+		69B580542D6B70200023AB7C /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		69B580562D6B70560023AB7C /* EventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
+		69B580582D6B707A0023AB7C /* EventsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsSection.swift; sourceTree = "<group>"; };
+		69B5805A2D6B70990023AB7C /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		69B5805C2D6B70B40023AB7C /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
+		69B5805E2D6B717E0023AB7C /* EventCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCard.swift; sourceTree = "<group>"; };
+		69B580602D6B78DD0023AB7C /* FullScreenMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenMapView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		69B5800B2D6B588F0023AB7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69B5801B2D6B58910023AB7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69B580252D6B58910023AB7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		69B580052D6B588F0023AB7C = {
+			isa = PBXGroup;
+			children = (
+				69B580102D6B588F0023AB7C /* CmfTrackerApp */,
+				69B580212D6B58910023AB7C /* CmfTrackerAppTests */,
+				69B5802B2D6B58910023AB7C /* CmfTrackerAppUITests */,
+				69B5800F2D6B588F0023AB7C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		69B5800F2D6B588F0023AB7C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				69B5800E2D6B588F0023AB7C /* CmfTrackerApp.app */,
+				69B5801E2D6B58910023AB7C /* CmfTrackerAppTests.xctest */,
+				69B580282D6B58910023AB7C /* CmfTrackerAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		69B580102D6B588F0023AB7C /* CmfTrackerApp */ = {
+			isa = PBXGroup;
+			children = (
+				69B5803B2D6B59AA0023AB7C /* Info.plist */,
+				69B580112D6B588F0023AB7C /* CmfTrackerAppApp.swift */,
+				69B580132D6B588F0023AB7C /* ContentView.swift */,
+				69B580152D6B58910023AB7C /* Assets.xcassets */,
+				69B580172D6B58910023AB7C /* Preview Content */,
+				69B5803C2D6B5B5D0023AB7C /* LocationManager.swift */,
+				69B580482D6B65B20023AB7C /* MapView.swift */,
+				69B5804A2D6B66080023AB7C /* StartRouteButton.swift */,
+				69B580542D6B70200023AB7C /* Event.swift */,
+				69B580562D6B70560023AB7C /* EventService.swift */,
+				69B580582D6B707A0023AB7C /* EventsSection.swift */,
+				69B5805A2D6B70990023AB7C /* CalendarView.swift */,
+				69B5805C2D6B70B40023AB7C /* EventDetailView.swift */,
+				69B5805E2D6B717E0023AB7C /* EventCard.swift */,
+				69B580602D6B78DD0023AB7C /* FullScreenMapView.swift */,
+			);
+			path = CmfTrackerApp;
+			sourceTree = "<group>";
+		};
+		69B580172D6B58910023AB7C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				69B580182D6B58910023AB7C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		69B580212D6B58910023AB7C /* CmfTrackerAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				69B580222D6B58910023AB7C /* CmfTrackerAppTests.swift */,
+			);
+			path = CmfTrackerAppTests;
+			sourceTree = "<group>";
+		};
+		69B5802B2D6B58910023AB7C /* CmfTrackerAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				69B5802C2D6B58910023AB7C /* CmfTrackerAppUITests.swift */,
+				69B5802E2D6B58910023AB7C /* CmfTrackerAppUITestsLaunchTests.swift */,
+			);
+			path = CmfTrackerAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		69B5800D2D6B588F0023AB7C /* CmfTrackerApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69B580322D6B58910023AB7C /* Build configuration list for PBXNativeTarget "CmfTrackerApp" */;
+			buildPhases = (
+				69B5800A2D6B588F0023AB7C /* Sources */,
+				69B5800B2D6B588F0023AB7C /* Frameworks */,
+				69B5800C2D6B588F0023AB7C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CmfTrackerApp;
+			productName = CmfTrackerApp;
+			productReference = 69B5800E2D6B588F0023AB7C /* CmfTrackerApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		69B5801D2D6B58910023AB7C /* CmfTrackerAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69B580352D6B58910023AB7C /* Build configuration list for PBXNativeTarget "CmfTrackerAppTests" */;
+			buildPhases = (
+				69B5801A2D6B58910023AB7C /* Sources */,
+				69B5801B2D6B58910023AB7C /* Frameworks */,
+				69B5801C2D6B58910023AB7C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				69B580202D6B58910023AB7C /* PBXTargetDependency */,
+			);
+			name = CmfTrackerAppTests;
+			productName = CmfTrackerAppTests;
+			productReference = 69B5801E2D6B58910023AB7C /* CmfTrackerAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		69B580272D6B58910023AB7C /* CmfTrackerAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69B580382D6B58910023AB7C /* Build configuration list for PBXNativeTarget "CmfTrackerAppUITests" */;
+			buildPhases = (
+				69B580242D6B58910023AB7C /* Sources */,
+				69B580252D6B58910023AB7C /* Frameworks */,
+				69B580262D6B58910023AB7C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				69B5802A2D6B58910023AB7C /* PBXTargetDependency */,
+			);
+			name = CmfTrackerAppUITests;
+			productName = CmfTrackerAppUITests;
+			productReference = 69B580282D6B58910023AB7C /* CmfTrackerAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		69B580062D6B588F0023AB7C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					69B5800D2D6B588F0023AB7C = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					69B5801D2D6B58910023AB7C = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 69B5800D2D6B588F0023AB7C;
+					};
+					69B580272D6B58910023AB7C = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 69B5800D2D6B588F0023AB7C;
+					};
+				};
+			};
+			buildConfigurationList = 69B580092D6B588F0023AB7C /* Build configuration list for PBXProject "CmfTrackerApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 69B580052D6B588F0023AB7C;
+			productRefGroup = 69B5800F2D6B588F0023AB7C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				69B5800D2D6B588F0023AB7C /* CmfTrackerApp */,
+				69B5801D2D6B58910023AB7C /* CmfTrackerAppTests */,
+				69B580272D6B58910023AB7C /* CmfTrackerAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		69B5800C2D6B588F0023AB7C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69B580192D6B58910023AB7C /* Preview Assets.xcassets in Resources */,
+				69B580162D6B58910023AB7C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69B5801C2D6B58910023AB7C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69B580262D6B58910023AB7C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		69B5800A2D6B588F0023AB7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69B580592D6B707A0023AB7C /* EventsSection.swift in Sources */,
+				69B5804B2D6B66080023AB7C /* StartRouteButton.swift in Sources */,
+				69B580142D6B588F0023AB7C /* ContentView.swift in Sources */,
+				69B5805F2D6B717E0023AB7C /* EventCard.swift in Sources */,
+				69B580122D6B588F0023AB7C /* CmfTrackerAppApp.swift in Sources */,
+				69B5803D2D6B5B5D0023AB7C /* LocationManager.swift in Sources */,
+				69B580612D6B78DD0023AB7C /* FullScreenMapView.swift in Sources */,
+				69B5805B2D6B70990023AB7C /* CalendarView.swift in Sources */,
+				69B5805D2D6B70B50023AB7C /* EventDetailView.swift in Sources */,
+				69B580552D6B70200023AB7C /* Event.swift in Sources */,
+				69B580492D6B65B20023AB7C /* MapView.swift in Sources */,
+				69B580572D6B70560023AB7C /* EventService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69B5801A2D6B58910023AB7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69B580232D6B58910023AB7C /* CmfTrackerAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69B580242D6B58910023AB7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69B5802F2D6B58910023AB7C /* CmfTrackerAppUITestsLaunchTests.swift in Sources */,
+				69B5802D2D6B58910023AB7C /* CmfTrackerAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		69B580202D6B58910023AB7C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 69B5800D2D6B588F0023AB7C /* CmfTrackerApp */;
+			targetProxy = 69B5801F2D6B58910023AB7C /* PBXContainerItemProxy */;
+		};
+		69B5802A2D6B58910023AB7C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 69B5800D2D6B588F0023AB7C /* CmfTrackerApp */;
+			targetProxy = 69B580292D6B58910023AB7C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		69B580302D6B58910023AB7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		69B580312D6B58910023AB7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		69B580332D6B58910023AB7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CmfTrackerApp/Preview Content\"";
+				DEVELOPMENT_TEAM = C28PB2TUX3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CmfTrackerApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cmf.tracker.app.ios.CmfTrackerApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		69B580342D6B58910023AB7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CmfTrackerApp/Preview Content\"";
+				DEVELOPMENT_TEAM = C28PB2TUX3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CmfTrackerApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cmf.tracker.app.ios.CmfTrackerApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		69B580362D6B58910023AB7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C28PB2TUX3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cmf.tracker.app.ios.CmfTrackerAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CmfTrackerApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CmfTrackerApp";
+			};
+			name = Debug;
+		};
+		69B580372D6B58910023AB7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C28PB2TUX3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cmf.tracker.app.ios.CmfTrackerAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CmfTrackerApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CmfTrackerApp";
+			};
+			name = Release;
+		};
+		69B580392D6B58910023AB7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C28PB2TUX3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cmf.tracker.app.ios.CmfTrackerAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CmfTrackerApp;
+			};
+			name = Debug;
+		};
+		69B5803A2D6B58910023AB7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C28PB2TUX3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cmf.tracker.app.ios.CmfTrackerAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CmfTrackerApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		69B580092D6B588F0023AB7C /* Build configuration list for PBXProject "CmfTrackerApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69B580302D6B58910023AB7C /* Debug */,
+				69B580312D6B58910023AB7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69B580322D6B58910023AB7C /* Build configuration list for PBXNativeTarget "CmfTrackerApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69B580332D6B58910023AB7C /* Debug */,
+				69B580342D6B58910023AB7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69B580352D6B58910023AB7C /* Build configuration list for PBXNativeTarget "CmfTrackerAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69B580362D6B58910023AB7C /* Debug */,
+				69B580372D6B58910023AB7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69B580382D6B58910023AB7C /* Build configuration list for PBXNativeTarget "CmfTrackerAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69B580392D6B58910023AB7C /* Debug */,
+				69B5803A2D6B58910023AB7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 69B580062D6B588F0023AB7C /* Project object */;
+}

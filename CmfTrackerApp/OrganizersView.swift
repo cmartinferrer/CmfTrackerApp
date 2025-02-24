@@ -8,6 +8,7 @@ struct Organizer: Identifiable {
 
 struct OrganizersView: View {
     @State private var organizers: [Organizer] = []
+    @State private var isLoading = true
     
     let columns = [
         GridItem(.flexible(), spacing: 16),
@@ -15,32 +16,49 @@ struct OrganizersView: View {
     ]
     
     var body: some View {
-        ScrollView {
-            LazyVGrid(columns: columns, spacing: 16) {
-                ForEach(organizers) { organizer in
-                    OrganizerCard(organizer: organizer)
+        VStack {
+            if isLoading {
+                ProgressView("Cargando organizadores...") // 🔹 Placeholder mientras se cargan los datos
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+            } else {
+                ScrollView {
+                    LazyVGrid(columns: columns, spacing: 16) {
+                        ForEach(organizers) { organizer in
+                            OrganizerCard(organizer: organizer)
+                        }
+                    }
+                    .padding(16)
                 }
             }
-            .padding(16)
         }
         .onAppear {
-            loadOrganizers()
+            Task {
+                await loadOrganizers()
+            }
         }
     }
     
-    private func loadOrganizers() {
-        DispatchQueue.global(qos: .background).async {
-            let data = [
-                Organizer(name: "ZONA TERRA", logoURL: "https://picsum.photos/200?random=1"),
-                Organizer(name: "Area 4x4", logoURL: "https://picsum.photos/200?random=2"),
-                Organizer(name: "Trip and Track", logoURL: "https://picsum.photos/200?random=3"),
-                Organizer(name: "Atalaya Experiences", logoURL: "https://picsum.photos/200?random=4"),
-                Organizer(name: "Rodibook", logoURL: "https://picsum.photos/200?random=5"),
-                Organizer(name: "Eutiches", logoURL: "https://picsum.photos/200?random=6"),
-            ]
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { // 🔹 Retraso para evitar conflicto con AsyncImage
-                self.organizers = data
+    private func loadOrganizers() async {
+        let urls = [
+            "https://picsum.photos/200?random=1",
+            "https://picsum.photos/200?random=2",
+            "https://picsum.photos/200?random=3",
+            "https://picsum.photos/200?random=4",
+            "https://picsum.photos/200?random=5",
+            "https://picsum.photos/200?random=6"
+        ]
+
+        let preloadedImages = await urls.concurrentMap { url -> Organizer in
+            if let imageURL = URL(string: url), let _ = try? Data(contentsOf: imageURL) {
+                return Organizer(name: "Org \(url)", logoURL: url)
+            } else {
+                return Organizer(name: "Org \(url)", logoURL: "fallback-url") // Evita fallos de carga
             }
+        }
+
+        await MainActor.run {
+            self.organizers = preloadedImages
+            self.isLoading = false
         }
     }
 }
@@ -93,5 +111,26 @@ struct OrganizerCard: View {
 struct OrganizersView_Previews: PreviewProvider {
     static var previews: some View {
         OrganizersView()
+    }
+}
+
+extension Array {
+    func concurrentMap<T>(_ transform: @escaping (Element) async -> T) async -> [T] {
+        await withTaskGroup(of: (Int, T).self) { group in
+            var results: [(Int, T)] = []
+            results.reserveCapacity(self.count)
+            
+            for (index, element) in self.enumerated() {
+                group.addTask {
+                    return (index, await transform(element))
+                }
+            }
+            
+            for await result in group {
+                results.append(result)
+            }
+            
+            return results.sorted { $0.0 < $1.0 }.map { $0.1 }
+        }
     }
 }

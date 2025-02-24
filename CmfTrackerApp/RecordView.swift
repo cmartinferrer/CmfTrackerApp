@@ -3,17 +3,16 @@ import MapKit
 
 struct RecordView: View {
     @EnvironmentObject var locationManager: LocationManager
-    
-    @State private var isRecording = false // 🔥 Ahora el estado lo gestiona la vista
+    @State private var isRecording = false
 
     var body: some View {
         VStack {
             Map(coordinateRegion: Binding(
                 get: { locationManager.region },
-                set: { _ in } // Bloqueamos el set para evitar conflictos de SwiftUI
+                set: { _ in }
             ), showsUserLocation: true)
                 .edgesIgnoringSafeArea(.all)
-            
+
             HStack {
                 if isRecording {
                     Button(action: stopRecording) {
@@ -39,7 +38,14 @@ struct RecordView: View {
             .background(Color.brown)
         }
         .onAppear {
-            isRecording = locationManager.isRecordingActive() // 🔥 Refresca el estado al entrar
+            locationManager.requestPermissionIfNeeded()
+            locationManager.startUpdatingLocation() // 🔥 Activa GPS al abrir la vista
+            isRecording = locationManager.isRecordingActive()
+        }
+        .onDisappear {
+            if !isRecording {
+                locationManager.stopUpdatingLocation() // 🔥 Apaga GPS si no está grabando
+            }
         }
     }
 
@@ -47,7 +53,6 @@ struct RecordView: View {
         DispatchQueue.main.async {
             locationManager.startRecording()
             isRecording = true
-            print("▶️ Botón Empezar presionado")
         }
     }
 
@@ -55,7 +60,6 @@ struct RecordView: View {
         DispatchQueue.main.async {
             locationManager.stopRecording()
             isRecording = false
-            print("⏹️ Botón Parar presionado")
         }
     }
 }

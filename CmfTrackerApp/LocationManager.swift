@@ -4,10 +4,10 @@ import MapKit
 
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     private let locationManager = CLLocationManager()
-    
+
     @Published private(set) var region: MKCoordinateRegion
     @Published private(set) var lastLocation: CLLocation?
-    
+
     private var timer: Timer?
     private var isRecording = false // 🔥 Variable local para gestionar el estado
 
@@ -19,10 +19,26 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         super.init()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
     }
-    
+
+    func requestPermissionIfNeeded() {
+        let status = CLLocationManager.authorizationStatus()
+        if status == .notDetermined {
+            locationManager.requestWhenInUseAuthorization()
+        }
+    }
+
+    func startUpdatingLocation() {
+        let status = CLLocationManager.authorizationStatus()
+        if status == .authorizedWhenInUse || status == .authorizedAlways {
+            locationManager.startUpdatingLocation()
+        }
+    }
+
+    func stopUpdatingLocation() {
+        locationManager.stopUpdatingLocation()
+    }
+
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
         DispatchQueue.main.async {
@@ -38,8 +54,10 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         guard !isRecording else { return } // Evita que se inicie más de una vez
         isRecording = true
         print("🔴 Iniciando grabación...")
-        
-        stopTimer() // 🔥 Evita timers duplicados
+
+        startUpdatingLocation() // 🔥 Activa GPS solo cuando grabamos
+
+        stopTimer() // Evita timers duplicados
         timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { [weak self] _ in
             DispatchQueue.main.async {
                 guard let self = self else { return }
@@ -51,10 +69,11 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
 
     func stopRecording() {
-        guard isRecording else { return } // Evita que se detenga si ya está parado
+        guard isRecording else { return }
         isRecording = false
         print("🛑 Deteniendo grabación...")
         stopTimer()
+        stopUpdatingLocation() // 🔥 Apaga GPS al terminar
     }
 
     private func stopTimer() {

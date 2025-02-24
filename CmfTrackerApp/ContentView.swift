@@ -23,27 +23,14 @@ struct ContentView: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            // Franja superior marrón (solo para la barra de estado y la isla flotante)
+            // Franja superior marrón
             Color.brown
                 .frame(height: safeAreaTop())
                 .ignoresSafeArea()
             
-            // Contenido dinámico
-            ZStack {
-                switch selectedTab {
-                case .home:
-                    HomeView()
-                case .organizers:
-                    OrganizersView()
-                case .record:
-                    RecordView()
-                case .myEvents:
-                    MyEventsView()
-                case .myActivity:
-                    MyActivityView()
-                }
-            }
-            .frame(maxHeight: .infinity)
+            // Contenido dinámico: solo se carga la vista activa
+            selectedView(for: selectedTab)
+                .frame(maxHeight: .infinity)
             
             // Menú inferior
             HStack {
@@ -66,6 +53,23 @@ struct ContentView: View {
             }
             .frame(height: 60)
             .background(Color.brown.ignoresSafeArea(edges: .bottom))
+        }
+    }
+    
+    // Solo carga la vista activa
+    @ViewBuilder
+    private func selectedView(for tab: TabItem) -> some View {
+        switch tab {
+        case .home:
+            HomeView()
+        case .organizers:
+            OrganizersView()
+        case .record:
+            RecordView()
+        case .myEvents:
+            MyEventsView()
+        case .myActivity:
+            MyActivityView()
         }
     }
     

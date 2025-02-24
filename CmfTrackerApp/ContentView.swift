@@ -19,7 +19,7 @@ enum TabItem: String, CaseIterable {
 }
 
 struct ContentView: View {
-    @State private var selectedTab: TabItem = .myEvents
+    @State private var selectedTab: TabItem = .home
     
     var body: some View {
         VStack(spacing: 0) {

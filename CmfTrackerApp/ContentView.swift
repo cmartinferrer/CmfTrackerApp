@@ -1,61 +1,71 @@
 import SwiftUI
 
+enum TabItem: String, CaseIterable {
+    case home = "Inicio"
+    case organizers = "Organizadores"
+    case record = "Grabar"
+    case myEvents = "Mis eventos"
+    case myActivity = "Mi actividad"
+    
+    var icon: String {
+        switch self {
+        case .home: return "house.fill"
+        case .organizers: return "person.3.fill"
+        case .record: return "record.circle.fill"
+        case .myEvents: return "calendar"
+        case .myActivity: return "chart.bar.fill"
+        }
+    }
+}
+
 struct ContentView: View {
-    @StateObject private var locationManager = LocationManager()
-    @State private var showCalendar = false
-    @State private var events = EventService.fetchEvents()
-    @State private var showFullScreenMap = false // Estado para abrir mapa en pantalla completa
-
+    @State private var selectedTab: TabItem = .myEvents
+    
     var body: some View {
-        VStack {
-            // Título con icono de calendario
-            HStack {
-                Text("CMF Tracker events")
-                    .font(.largeTitle)
-                    .bold()
-                Spacer()
-                
-            }
-            .padding()
-            .padding(.top, safeAreaTop()) //
+        VStack(spacing: 0) {
+            // Franja superior marrón (solo para la barra de estado y la isla flotante)
+            Color.brown
+                .frame(height: safeAreaTop())
+                .ignoresSafeArea()
             
-            // Sección de eventos
-            EventsSection(events: events)
-                .padding(.bottom)
-
-            // Mapa con botón de ampliar
-            ZStack(alignment: .topTrailing) { // Se coloca el icono arriba a la derecha
-                MapView(locationManager: locationManager)
-                    .frame(height: 300)
-                    .cornerRadius(20)
-                    .padding()
-
-                // Botón para ampliar el mapa
-                Button(action: {
-                    showFullScreenMap = true
-                }) {
-                    Image(systemName: "arrow.up.left.and.arrow.down.right")
-                        .resizable()
-                        .frame(width: 30, height: 30)
-                        .padding(10)
-                        .background(Color.white.opacity(0.8))
-                        .clipShape(Circle())
-                        .shadow(radius: 4)
+            // Contenido dinámico
+            ZStack {
+                switch selectedTab {
+                case .home:
+                    HomeView()
+                case .organizers:
+                    OrganizersView()
+                case .record:
+                    RecordView()
+                case .myEvents:
+                    MyEventsView()
+                case .myActivity:
+                    MyActivityView()
                 }
-                .padding(16)
             }
-
-            // Botón para iniciar la ruta
-            StartRouteButton {
-                print("Iniciando envío de ubicación al backend...")
+            .frame(maxHeight: .infinity)
+            
+            // Menú inferior
+            HStack {
+                ForEach(TabItem.allCases, id: \.self) { tab in
+                    VStack {
+                        Image(systemName: tab.icon)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 24, height: 24)
+                        Text(tab.rawValue)
+                            .font(.caption)
+                    }
+                    .foregroundColor(selectedTab == tab ? .white : Color(red: 0.9, green: 0.8, blue: 0.7))
+                    .frame(maxWidth: .infinity)
+                    .padding(.top, 10)
+                    .onTapGesture {
+                        selectedTab = tab
+                    }
+                }
             }
-            .padding()
-        }
-        .sheet(isPresented: $showCalendar) {
-            CalendarView(isPresented: $showCalendar, events: events) { _ in }
-        }
-        .fullScreenCover(isPresented: $showFullScreenMap) {
-            FullScreenMapView(locationManager: locationManager)
+            .frame(height: 60)
+            .background(Color.brown.ignoresSafeArea(edges: .bottom))
         }
     }
     

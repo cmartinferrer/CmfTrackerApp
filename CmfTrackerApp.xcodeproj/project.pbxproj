@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		697B915A2D6CA0D3004AC364 /* OrganizersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697B91592D6CA0D3004AC364 /* OrganizersView.swift */; };
+		697B915D2D6CA11F004AC364 /* MyEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697B915C2D6CA11F004AC364 /* MyEventsView.swift */; };
+		697B915F2D6CA13A004AC364 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697B915E2D6CA13A004AC364 /* RecordView.swift */; };
+		697B91612D6CA159004AC364 /* MyActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697B91602D6CA159004AC364 /* MyActivityView.swift */; };
+		697B91632D6CA346004AC364 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697B91622D6CA346004AC364 /* HomeView.swift */; };
+		697B91652D6CAB26004AC364 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697B91642D6CAB26004AC364 /* LocationManager.swift */; };
 		69B580122D6B588F0023AB7C /* CmfTrackerAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B580112D6B588F0023AB7C /* CmfTrackerAppApp.swift */; };
 		69B580142D6B588F0023AB7C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B580132D6B588F0023AB7C /* ContentView.swift */; };
 		69B580162D6B58910023AB7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69B580152D6B58910023AB7C /* Assets.xcassets */; };
@@ -14,16 +20,6 @@
 		69B580232D6B58910023AB7C /* CmfTrackerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B580222D6B58910023AB7C /* CmfTrackerAppTests.swift */; };
 		69B5802D2D6B58910023AB7C /* CmfTrackerAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5802C2D6B58910023AB7C /* CmfTrackerAppUITests.swift */; };
 		69B5802F2D6B58910023AB7C /* CmfTrackerAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5802E2D6B58910023AB7C /* CmfTrackerAppUITestsLaunchTests.swift */; };
-		69B5803D2D6B5B5D0023AB7C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5803C2D6B5B5D0023AB7C /* LocationManager.swift */; };
-		69B580492D6B65B20023AB7C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B580482D6B65B20023AB7C /* MapView.swift */; };
-		69B5804B2D6B66080023AB7C /* StartRouteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5804A2D6B66080023AB7C /* StartRouteButton.swift */; };
-		69B580552D6B70200023AB7C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B580542D6B70200023AB7C /* Event.swift */; };
-		69B580572D6B70560023AB7C /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B580562D6B70560023AB7C /* EventService.swift */; };
-		69B580592D6B707A0023AB7C /* EventsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B580582D6B707A0023AB7C /* EventsSection.swift */; };
-		69B5805B2D6B70990023AB7C /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5805A2D6B70990023AB7C /* CalendarView.swift */; };
-		69B5805D2D6B70B50023AB7C /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5805C2D6B70B40023AB7C /* EventDetailView.swift */; };
-		69B5805F2D6B717E0023AB7C /* EventCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5805E2D6B717E0023AB7C /* EventCard.swift */; };
-		69B580612D6B78DD0023AB7C /* FullScreenMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B580602D6B78DD0023AB7C /* FullScreenMapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		697B91592D6CA0D3004AC364 /* OrganizersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizersView.swift; sourceTree = "<group>"; };
+		697B915C2D6CA11F004AC364 /* MyEventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsView.swift; sourceTree = "<group>"; };
+		697B915E2D6CA13A004AC364 /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
+		697B91602D6CA159004AC364 /* MyActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyActivityView.swift; sourceTree = "<group>"; };
+		697B91622D6CA346004AC364 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		697B91642D6CAB26004AC364 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		69B5800E2D6B588F0023AB7C /* CmfTrackerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CmfTrackerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69B580112D6B588F0023AB7C /* CmfTrackerAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CmfTrackerAppApp.swift; sourceTree = "<group>"; };
 		69B580132D6B588F0023AB7C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,16 +57,6 @@
 		69B5802C2D6B58910023AB7C /* CmfTrackerAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CmfTrackerAppUITests.swift; sourceTree = "<group>"; };
 		69B5802E2D6B58910023AB7C /* CmfTrackerAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CmfTrackerAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		69B5803B2D6B59AA0023AB7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		69B5803C2D6B5B5D0023AB7C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
-		69B580482D6B65B20023AB7C /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		69B5804A2D6B66080023AB7C /* StartRouteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartRouteButton.swift; sourceTree = "<group>"; };
-		69B580542D6B70200023AB7C /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		69B580562D6B70560023AB7C /* EventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
-		69B580582D6B707A0023AB7C /* EventsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsSection.swift; sourceTree = "<group>"; };
-		69B5805A2D6B70990023AB7C /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
-		69B5805C2D6B70B40023AB7C /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
-		69B5805E2D6B717E0023AB7C /* EventCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCard.swift; sourceTree = "<group>"; };
-		69B580602D6B78DD0023AB7C /* FullScreenMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenMapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,16 +112,12 @@
 				69B580132D6B588F0023AB7C /* ContentView.swift */,
 				69B580152D6B58910023AB7C /* Assets.xcassets */,
 				69B580172D6B58910023AB7C /* Preview Content */,
-				69B5803C2D6B5B5D0023AB7C /* LocationManager.swift */,
-				69B580482D6B65B20023AB7C /* MapView.swift */,
-				69B5804A2D6B66080023AB7C /* StartRouteButton.swift */,
-				69B580542D6B70200023AB7C /* Event.swift */,
-				69B580562D6B70560023AB7C /* EventService.swift */,
-				69B580582D6B707A0023AB7C /* EventsSection.swift */,
-				69B5805A2D6B70990023AB7C /* CalendarView.swift */,
-				69B5805C2D6B70B40023AB7C /* EventDetailView.swift */,
-				69B5805E2D6B717E0023AB7C /* EventCard.swift */,
-				69B580602D6B78DD0023AB7C /* FullScreenMapView.swift */,
+				697B91592D6CA0D3004AC364 /* OrganizersView.swift */,
+				697B915C2D6CA11F004AC364 /* MyEventsView.swift */,
+				697B915E2D6CA13A004AC364 /* RecordView.swift */,
+				697B91602D6CA159004AC364 /* MyActivityView.swift */,
+				697B91622D6CA346004AC364 /* HomeView.swift */,
+				697B91642D6CAB26004AC364 /* LocationManager.swift */,
 			);
 			path = CmfTrackerApp;
 			sourceTree = "<group>";
@@ -289,18 +277,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69B580592D6B707A0023AB7C /* EventsSection.swift in Sources */,
-				69B5804B2D6B66080023AB7C /* StartRouteButton.swift in Sources */,
 				69B580142D6B588F0023AB7C /* ContentView.swift in Sources */,
-				69B5805F2D6B717E0023AB7C /* EventCard.swift in Sources */,
+				697B91632D6CA346004AC364 /* HomeView.swift in Sources */,
+				697B91612D6CA159004AC364 /* MyActivityView.swift in Sources */,
 				69B580122D6B588F0023AB7C /* CmfTrackerAppApp.swift in Sources */,
-				69B5803D2D6B5B5D0023AB7C /* LocationManager.swift in Sources */,
-				69B580612D6B78DD0023AB7C /* FullScreenMapView.swift in Sources */,
-				69B5805B2D6B70990023AB7C /* CalendarView.swift in Sources */,
-				69B5805D2D6B70B50023AB7C /* EventDetailView.swift in Sources */,
-				69B580552D6B70200023AB7C /* Event.swift in Sources */,
-				69B580492D6B65B20023AB7C /* MapView.swift in Sources */,
-				69B580572D6B70560023AB7C /* EventService.swift in Sources */,
+				697B91652D6CAB26004AC364 /* LocationManager.swift in Sources */,
+				697B915A2D6CA0D3004AC364 /* OrganizersView.swift in Sources */,
+				697B915F2D6CA13A004AC364 /* RecordView.swift in Sources */,
+				697B915D2D6CA11F004AC364 /* MyEventsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
